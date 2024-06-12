@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  -->
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="portStyles.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/venky.jpg" alt="Venkat" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Golthi Venkatacharyulu">Golthi Venkatacharyulu</h1>
+          <p class="title">Computer Science Student</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:venkateshgolthi07@gmail.com" class="contact-link">venkateshgolthi07@gmail.com</a>
+            </div>
+
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+917995775401" class="contact-link">+91 7995775401</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">DOB</p>
+              <time datetime="2005-03-07">Mar 07, 2005</time>
+            </div>
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>CTRI, Subbarao Nagar, Rajahmundry, Andhra Pradesh</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/venkatesh1545" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/golthi-venkatacharyulu-5520a525a/" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certifications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+        -->
+
+    <article class="about  active" data-page="about">
+
+        <header>
+        <h2 class="h2 article-title">About me</h2>
+        </header>
+    
+        <section class="about-text">
+        <p>
+            As a Computer Science Engineering Student, I am interested
+            about learning new programming languages and exploring
+            various technologies, Now I am currently working on a
+            startup objective and I am interested on app development
+            and AWS Cloud devops.
+        </p>
+        </section>
+    
+        <!--
+            - service
+        -->
+    
+        <section class="service">
+    
+        <h3 class="h3 service-title">What I'm doing</h3>
+    
+        <ul class="service-list">
+    
+            <li class="service-item">
+    
+            <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+            </div>
+    
+            <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web/App design</h4>
+    
+                <p class="service-item-text">
+                The most modern and high-quality design made at a professional level.
+                </p>
+            </div>
+    
+            </li>
+    
+            <li class="service-item">
+    
+            <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+            </div>
+    
+            <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web/App development</h4>
+    
+                <p class="service-item-text">
+                High-quality development of sites at the professional level.
+                </p>
+            </div>
+    
+            </li>
+    
+            <li class="service-item">
+    
+            <div class="service-icon-box">
+                <img src="./assets/images/icon-coding.jpg" alt="mobile app icon" width="40">
+            </div>
+    
+            <div class="service-content-box">
+                <h4 class="h4 service-item-title">Programming</h4>
+    
+                <p class="service-item-text">
+                Professional development of applications for iOS and Android.
+                </p>
+            </div>
+    
+            </li>
+    
+            <li class="service-item">
+    
+            <div class="service-icon-box">
+                <img src="./assets/images/icon-cloud.jpg" alt="camera icon" width="40">
+            </div>
+    
+            <div class="service-content-box">
+                <h4 class="h4 service-item-title">Deployment</h4>
+    
+                <p class="service-item-text">
+                I make high-quality photos of any category at a professional level.
+                </p>
+            </div>
+    
+            </li>
+    
+        </ul>
+    
+        </section>
+    
+    </article>
+    
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sasi English Medium high School</h4>
+
+              <span>2019 — 2020</span>
+
+              <p class="timeline-text">
+                10th Standard
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sasi english Medium Junior College</h4>
+
+              <span>2020 - 2022</span>
+
+              <p class="timeline-text">
+                Intermediate MPC
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Aditya College Of Engineering and technology</h4>
+
+              <span>2022 — 2026</span>
+
+              <p class="timeline-text">
+                B.Tech - CSE
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Apprentice</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Become Coder</h4>
+
+              <span>Jan,2024 - Apr,2024 (4 mos)</span>
+
+              <p class="timeline-text">
+                As a "Become Coder" trainee at Technical Hub, I started an exciting journey to improve my technical skills by diving into programming, mainly focusing on Java and Java Database Connectivity (JDBC).
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Skillup coder</h4>
+
+              <span>Aug,2023 - Dec,2023 (5 mos)</span>
+
+              <p class="timeline-text">
+                As a "Skillup Coder," I embarked on an enriching journey to deepen my technical prowess, delving into the realms of programming and systems. My exploration led me to master object-oriented programming through C++, a robust language integral to numerous computer systems and software applications.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Ignite Coder</h4>
+
+              <span>Oct,2022 - Jul,2023 (10 mos)</span>
+
+              <p class="timeline-text">
+                During my tenure as an Ignite Coder trainee at the technical hub, I extensively explored core programming and web development technologies. Throughout this immersive experience, I honed my expertise in HTML, CSS, C, Python, and Data Structures, cultivating a robust skill set in each domain.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C++</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Java</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">SQL</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Data Structures and Algorithm</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+        
+        <div class="container">
+          <button id="downloadBtn" onclick="window.open('./assets/venkat_resume_new.pdf')"> Download Resume</button>
+        </div>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #Projects
+      -->
+
+      <article class="projects" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">projects</h2>
+        </header>
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Machine Learning</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>JDBC</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Machine Learning</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>JDBC</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.png" alt="Portfolio" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Portfolio</h3>
+                <p class="project-category">Web development</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="globe-outline"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+            
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+            
+                  <img src="./assets/images/project-2.jpg" alt="profile-card" loading="lazy">
+                </figure>
+                <h3 class="project-title">Profile-Card</h3>
+                <p class="project-category">Web development</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545/profile-card" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href="https://venkatesh1545.github.io/profile-card/" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="globe-outline"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="To-Do" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">To-Do List</h3>
+                <p class="project-category">Web development</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545/ToDoList" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href="https://venkatesh1545.github.io/ToDoList/" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="globe-outline"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-4.avif" alt="sign-up" loading="lazy">
+                </figure>
+                <h3 class="project-title">Sign-up Form</h3>
+                <p class="project-category">Web development</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545/signup-form" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href="#portIndex.html" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="globe-outline"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="JDBC">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="IVM" loading="lazy">
+                </figure>
+                <h3 class="project-title">Book Store System</h3>
+                <p class="project-category">JDBC</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545/Java-Programming/blob/main/JDBC/Projects/BookStore.java" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href="#portIndex.html" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="globe-outline"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="JDBC">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-6.jpg" alt="IVM" loading="lazy">
+                </figure>
+                <h3 class="project-title">Inventory Management System</h3>
+                <p class="project-category">JDBC</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545/Java-Programming/tree/main/JDBC/Projects/IMS" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="globe-outline"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Machine Learning">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-7.jpg" alt="Netflix" loading="lazy">
+                </figure>
+                <h3 class="project-title">Netflix Movie Recommendation System</h3>
+                <p class="project-category">Machine Learning</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545/Machine-learning/tree/main/Netflix%20Project" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Machine Learning">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="OTT" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">OTT Recommendation System</h3>
+                <p class="project-category">Machine Learning</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href="https://github.com/venkatesh1545/Machine-learning/blob/main/ott_recommendation_system%20(1).ipynb" class="social-link" target="_blank" rel="noopener noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        Certifications
+      -->
+
+
+      <article class="Certifications" data-page="certifications">
+        <header>
+          <h2 class="h2 article-title">Certifications</h2>
+        </header>
+        <section class="Certifications-posts">
+          <ul class="Certifications-posts-list">
+            <li class="Certifications-post-item">
+              <a href="./assets/images/cert-3.jpg" target="_blank">
+                <figure class="Certifications-banner-box">
+                  <img src="./assets/images/cert-3.jpg" alt="HTML,CSS" loading="lazy">
+                </figure>
+                <div class="Certifications-content">
+                  <div class="Certifications-meta">
+                    <p class="Certifications-category">Web Development</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">May 6, 2023</time>
+                  </div>
+                  <h3 class="h3 Certifications-item-title">HTML and CSS Certification - IT Specialist Certiport</h3>
+                  <p class="Certifications-text">
+                    I am proud to have earned the HTML and CSS Certification from IT Specialist Certiport, a globally recognized certification provider. This certification validates my proficiency in HTML and CSS, demonstrating my ability to build and style modern web pages effectively.
+                  </p>
+                </div>
+              </a>
+            </li>
+          
+            <li class="Certifications-post-item">
+              <a href="./assets/images/certificate-1.jpg" target="_blank">
+                <figure class="Certifications-banner-box">
+                  <img src="./assets/images/certificate-1.jpg" alt="Python" loading="lazy">
+                </figure>
+                <div class="Certifications-content">
+                  <div class="Certifications-meta">
+                    <p class="Certifications-category">Programming</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">May 11, 2023</time>
+                  </div>
+                  <h3 class="h3 Certifications-item-title">Python Certificate from IT Specialist in 2023</h3>
+                  <p class="Certifications-text">
+                    I earned the Python Programming Certificate from IT Specialist, demonstrating my proficiency in Python, one of the most versatile and widely-used programming languages in the industry.
+                  </p>
+                </div>
+              </a>
+            </li>
+            
+            <li class="Certifications-post-item">
+              <a href="./assets/images/certificate-2.jpg" target="_blank">
+                <figure class="Certifications-banner-box">
+                  <img src="./assets/images/certificate-2.jpg" alt="Python" loading="lazy">
+                </figure>
+                <div class="Certifications-content">
+                  <div class="Certifications-meta">
+                    <p class="Certifications-category">Programming</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">May 9, 2023</time>
+                  </div>
+                  <h3 class="h3 Certifications-item-title">Programming Essentials in Python - OpenEDG Python Institute</h3>
+                  <p class="Certifications-text">
+                    I earned the "Programming Essentials in Python" certification from the OpenEDG Python Institute, which provided a comprehensive foundation in Python programming. This certification covers essential programming concepts such as data types, control structures, functions, modules, and error handling.
+                  </p>
+                </div>
+              </a>
+            </li>
+            
+            
+            <li class="Certifications-post-item">
+              <a href="./assets/images/certificate-4.png" target="_blank">
+                <figure class="Certifications-banner-box">
+                  <img src="./assets/images/certificate-4.png" alt="C Programming" loading="lazy">
+                </figure>
+                <div class="Certifications-content">
+                  <div class="Certifications-meta">
+                    <p class="Certifications-category">Programming</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Jan 26, 2023</time>
+                  </div>
+                  <h3 class="h3 Certifications-item-title">Programming Essentials in C Certificate</h3>
+                  <p class="Certifications-text">
+                    I am proud to have earned the "Programming Essentials in C" certificate from Cisco, a globally recognized leader in networking solutions. This certification validates my proficiency in the fundamental concepts of the C programming language, a cornerstone of modern software development.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="Certifications-post-item">
+              <a href="./assets/images/certificate-8.png" target="_blank">
+                <figure class="Certifications-banner-box">
+                  <img src="./assets/images/certificate-8.png" alt="redhat" loading="lazy">
+                </figure>
+                <div class="Certifications-content">
+                  <div class="Certifications-meta">
+                    <p class="Certifications-category">Redhat</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Jun 12, 2024</time>
+                  </div>
+                  <h3 class="h3 Certifications-item-title"> Redhat System Administration Certification</h3>
+                  <p class="Certifications-text">
+                    I am proud to have earned my Red Hat System Administration certification, a testament to my expertise in managing and operating Red Hat Enterprise Linux systems. This certification validates my ability to perform essential system administration tasks required in today's enterprise environments.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="Certifications-post-item">
+              <a href="./assets/images/certificate-9.png" target="_blank">
+                <figure class="Certifications-banner-box">
+                  <img src="./assets/images/certificate-9.png" alt="java" loading="lazy">
+                </figure>
+                <div class="Certifications-content">
+                  <div class="Certifications-meta">
+                    <p class="Certifications-category">Java Programming</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Apr 7, 2024</time>
+                  </div>
+                  <h3 class="h3 Certifications-item-title">Oracle Academy Java Programming Certificate</h3>
+                  <p class="Certifications-text">
+                    I am proud to have earned a certificate in Java Programming from Oracle Academy, a globally recognized leader in software development education. This certification reflects my comprehensive understanding and proficiency in Java, one of the most widely used programming languages in the industry.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <header>
+            <h2 class="h2 article-title">Internships</h2>
+          </header>
+            <ul class="Certifications-posts-list">
+              <li class="Certifications-post-item">
+                <a href="./assets/images/certificate-5.png" target="_blank">
+                  <figure class="Certifications-banner-box">
+                    <img src="./assets/images/certificate-5.png" alt="Internship" loading="lazy">
+                  </figure>
+                  <div class="Certifications-content">
+                    <div class="Certifications-meta">
+                      <p class="Certifications-category">Internship Completion</p>
+                      <span class="dot"></span>
+                      <time datetime="2022-02-23">jul 1, 2023 - Aug 31, 2023</time>
+                    </div>
+                    <h3 class="h3 Certifications-item-title">Internship Completion in Data Science - Academor</h3>
+                    <p class="Certifications-text">
+                      I am proud to have successfully completed an intensive Data Science internship with Academor, a leading platform for professional education. During this internship, I gained hands-on experience and advanced knowledge in various aspects of Data Science.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="Certifications-post-item">
+                <a href="./assets/images/certificate-6.png" target="_blank">
+                  <figure class="Certifications-banner-box">
+                    <img src="./assets/images/certificate-6.png" alt="Internship" loading="lazy">
+                  </figure>
+                  <div class="Certifications-content">
+                    <div class="Certifications-meta">
+                      <p class="Certifications-category">Internship Course Completion</p>
+                      <span class="dot"></span>
+                      <time datetime="2022-02-23">jul 1, 2023 - Aug 31, 2023</time>
+                    </div>
+                    <h3 class="h3 Certifications-item-title">Internship Course Completion in Data Science - Academor</h3>
+                    <p class="Certifications-text">
+                      I successfully completed an intensive internship course in Data Science from Academor, where I gained hands-on experience and advanced knowledge in the field. 
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="Certifications-post-item">
+                <a href="./assets/images/certificate-7.png" target="_blank">
+                  <figure class="Certifications-banner-box">
+                    <img src="./assets/images/certificate-7.png" alt="Internship" loading="lazy">
+                  </figure>
+                  <div class="Certifications-content">
+                    <div class="Certifications-meta">
+                      <p class="Certifications-category">Internship Offer</p>
+                      <span class="dot"></span>
+                      <time datetime="2022-02-23">Jun 10, 2024 - jul 27, 2024</time>
+                    </div>
+                    <h3 class="h3 Certifications-item-title">Internship Offer in AWS Development - Technical Hub</h3>
+                    <p class="Certifications-text">
+                      I am thrilled to share that I have received an internship offer from Technical Hub for a role in AWS development. This exciting opportunity will allow me to deepen my expertise in Amazon Web Services (AWS), a leading cloud platform that powers countless businesses worldwide.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+        </section>
+      </article>
+      
+      
+      <!--
+        - #CONTACT
+      -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4737.429953882718!2d81.79054825829665!3d17.023222329771336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3e5b553be63%3A0xc2c6fc7e163ab238!2sCTRI%20Rd%2C%20Rajamahendravaram%2C%20Andhra%20Pradesh%20533105%2C%20India!5e0!3m2!1sen!2sbd!4v1718173698281!5m2!1sen!2sbd" 
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </figure>
+        </section>
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="portScript.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
