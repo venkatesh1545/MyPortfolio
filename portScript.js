@@ -14,6 +14,8 @@ sidebarBtn.addEventListener("click", function () {
   elementToggleFunc(sidebar);
 });
 
+//Project page 
+
 // Custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
@@ -62,6 +64,56 @@ for (let i = 0; i < filterBtn.length; i++) {
     lastClickedBtn = this;
   });
 }
+/* Certifications*/
+
+// Custom select variables for certifications
+const select1 = document.querySelector("[data-select1]");
+const selectItems1 = document.querySelectorAll("[data-select-item1]");
+const selectValue1 = document.querySelector("[data-select-value1]");
+const filterBtn1 = document.querySelectorAll("[data-filter-btn1]");
+const filterItems1 = document.querySelectorAll("[data-filter-item]"); // Correct selector for filter items
+
+select1.addEventListener("click", function () {
+  elementToggleFunc(this);
+});
+
+const filterFunc1 = function (selectedValue) {
+  for (let i = 0; i < filterItems1.length; i++) {
+    const category = filterItems1[i].dataset.category.toLowerCase(); // Use dataset.category to match with selectedValue
+    if (selectedValue === "all") {
+      filterItems1[i].classList.add("active");
+    } else if (selectedValue === category) {
+      filterItems1[i].classList.add("active");
+    } else {
+      filterItems1[i].classList.remove("active");
+    }
+  }
+};
+
+// Add event in all select items
+for (let i = 0; i < selectItems1.length; i++) {
+  selectItems1[i].addEventListener("click", function () {
+    const selectedValue1 = this.getAttribute("data-select-item1");
+    selectValue1.innerText = this.innerText;
+    elementToggleFunc(select1); // Close the dropdown after selection
+    filterFunc1(selectedValue1);
+  });
+}
+
+// Add event in all filter button items for large screen
+let lastClickedBtn1 = filterBtn1[0];
+for (let i = 0; i < filterBtn1.length; i++) {
+  filterBtn1[i].addEventListener("click", function () {
+    const selectedValue1 = this.getAttribute("data-filter-btn1");
+    selectValue1.innerText = this.innerText;
+    filterFunc1(selectedValue1);
+    lastClickedBtn1.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn1 = this;
+  });
+}
+
+// Contact page
 
 // Contact form variables
 const form = document.querySelector("[data-form]");
@@ -79,6 +131,7 @@ for (let i = 0; i < formInputs.length; i++) {
     }
   });
 }
+
 
 // Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -99,3 +152,31 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+// Mode toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('mode-toggle');
+  const body = document.body;
+
+  const setMode = (mode) => {
+    if (mode === 'light') {
+      body.classList.add('light-mode');
+      body.classList.remove('dark-mode');
+    } else {
+      body.classList.add('dark-mode');
+      body.classList.remove('light-mode');
+    }
+  };
+
+  // Initialize mode from localStorage
+  const savedMode = localStorage.getItem('mode') || 'dark';
+  setMode(savedMode);
+
+  // Toggle mode on button click
+  toggleButton.addEventListener('click', function() {
+    const currentMode = body.classList.contains('light-mode') ? 'light' : 'dark';
+    const newMode = currentMode === 'light' ? 'dark' : 'light';
+    setMode(newMode);
+    localStorage.setItem('mode', newMode);
+  });
+});
