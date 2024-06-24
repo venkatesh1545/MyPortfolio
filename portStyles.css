@@ -78,26 +78,20 @@
     --fw-400: 400;
     --fw-500: 500;
     --fw-600: 600;
-  
     /**
      * shadow
      */
-    
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
     --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
     --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
-  
     /**
      * transition
      */
-  
     --transition-1: 0.25s ease;
     --transition-2: 0.5s ease-in-out;
-  
   }
-  
   /*-----------------------------------*\
     #RESET
   \*-----------------------------------*/
@@ -389,11 +383,21 @@
     color: var(--light-gray-70);
     font-size: 18px;
   }
-  
-  
   .social-item .social-link:hover { color: var(--light-gray); }
   
  /* Default dark mode styles */
+/* Navbar styling */
+nav {
+  position: fixed;
+  top: 1;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other elements */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect to the navbar */
+  color: #000;
+}
+
+/* Default dark mode styles */
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -401,7 +405,7 @@ body.dark-mode {
 
 /* Light mode styles */
 body.light-mode {
-  background-color:#cacaca; /* Dark mode color with opacity */
+  background-color: #cacaca; /* Light mode background color */
   color: #ffffff; /* Text color in light mode */
 }
 
@@ -411,18 +415,19 @@ body.dark-mode .about-text p {
 }
 
 body.light-mode .about-text p {
-  color: #ffffff; /* White color in light mode */
+  color: #ffffff; /* Black color in light mode */
 }
 
+/* Mode toggle button styling */
 .mode-toggle {
   position: fixed;
   top: 10px;
-  right: 0px;
+  left: 10px; /* Adjusted for better positioning */
   padding: 10px 5px;
   cursor: pointer;
   background-color: #000;
   color: #fff;
-  border: none;
+  border: 2px solid;
   border-radius: 5px;
 }
 
@@ -431,10 +436,11 @@ body.light-mode .mode-toggle {
   color: #000;
 }
 
-/* Apply backdrop filter to achieve blur effect */
-body.light-mode {
-  backdrop-filter: blur(10px); /* Adjust blur strength as needed */
+/* Ensure body content is not hidden behind fixed navbar */
+body {
+  padding-top: 50px; /* Adjust this value to match the height of your navbar */
 }
+
   /*-----------------------------------*\
     #NAVBAR
   \*-----------------------------------*/
@@ -530,19 +536,15 @@ body.light-mode {
     font-weight: var(--fw-3);
     line-height: 1.6;
   }
-  
   /*-----------------------------------*\
     #RESUME
   \*-----------------------------------*/
   
   .article-title { margin-bottom: 30px; }
-  
   /**
    * education and experience 
    */
-  
   .timeline { margin-bottom: 30px; }
-  
   .timeline .title-wrapper {
     display: flex;
     align-items: center;
@@ -616,34 +618,57 @@ body.light-mode {
   /*
     skills 
    */
+   /* General styling for the skill section */
 .skill {
   padding: 10px;
 }
 
 .skills-title {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .skills-list {
   list-style-type: none;
-  padding: 5;
+  padding: 10;
 }
 
 .skills-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .skills-item b {
   flex: 1;
+  min-width: 150px; /* Ensure labels don't get too narrow */
+  font-size: 14px;
 }
 
 .skills-item span {
   flex: 2;
   text-align: left;
+  font-size: 14px;
 }
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .skills-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-item b {
+    margin-bottom: 5px; /* Add some spacing between label and content */
+    min-width: auto; /* Reset min-width */
+  }
+
+  .skills-item span {
+    text-align: left;
+  }
+}
+
   /*-----------------------------------*\
     #PRojects page
   \*-----------------------------------*/
@@ -792,6 +817,15 @@ body.light-mode {
     text-transform: capitalize;
     line-height: 1.3;
   }
+  .project-title a {
+    color: inherit; /* Match the link color with the text */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: bold; /* Make the link bold or adjust as needed */
+  }
+  
+  .project-title a:hover {
+    text-decoration: underline; /* Add underline on hover or any hover effect you prefer */
+  }
   
   .project-category {
     color: var(--light-gray-70);
@@ -802,7 +836,6 @@ body.light-mode {
 /*
 Filtering items in certification page
 */
-
 .filter-list1 { display: none; }
   
 .filter-select-box1 {
@@ -973,16 +1006,7 @@ Filtering items in certification page
    */
   
   @media (min-width: 450px) {
-  
-    /**
-     * client
-     */
-  
-    .clients-item { min-width: calc(33.33% - 10px); }
-    /**
-     * #PORTFOLIO, BLOG 
-     */
-  
+    .clients-item { min-width: calc(33.33% - 10px); } 
     .project-img,
     .Certifications-banner-box { height: auto; }
   
@@ -1271,11 +1295,8 @@ Filtering items in certification page
     /**
      * RESET
      */
-  
     body::-webkit-scrollbar { width: 20px; }
-  
     body::-webkit-scrollbar-track { background: var(--smoky-black); }
-  
     body::-webkit-scrollbar-thumb {
       border: 5px solid var(--smoky-black);
       background: hsla(0, 0%, 100%, 0.1);
@@ -1283,13 +1304,8 @@ Filtering items in certification page
       box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
                   inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
     }
-  
     body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
-  
     body::-webkit-scrollbar-button { height: 60px; }
-  
-  
-  
     /**
      * REUSED STYLE
      */
