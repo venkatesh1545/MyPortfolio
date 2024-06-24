@@ -152,31 +152,42 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
-
-// Mode toggle functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleButton = document.getElementById('mode-toggle');
+document.addEventListener("DOMContentLoaded", () => {
+  const modeToggle = document.getElementById("mode-toggle");
   const body = document.body;
+  const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+  const sidebarInfoMore = document.querySelector(".sidebar-info_more");
+  const navLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
 
-  const setMode = (mode) => {
-    if (mode === 'light') {
-      body.classList.add('light-mode');
-      body.classList.remove('dark-mode');
-    } else {
-      body.classList.add('dark-mode');
-      body.classList.remove('light-mode');
-    }
-  };
+  // Toggle dark mode
+  modeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    body.classList.toggle("light-mode");
+    modeToggle.innerHTML = body.classList.contains("dark-mode")
+      ? '<ion-icon name="sunny-outline"></ion-icon>'
+      : '<ion-icon name="moon-outline"></ion-icon>';
+  });
 
-  // Initialize mode from localStorage
-  const savedMode = localStorage.getItem('mode') || 'dark';
-  setMode(savedMode);
+  // Show/Hide sidebar contacts
+  sidebarBtn.addEventListener("click", () => {
+    sidebarInfoMore.classList.toggle("visible");
+  });
 
-  // Toggle mode on button click
-  toggleButton.addEventListener('click', function() {
-    const currentMode = body.classList.contains('light-mode') ? 'light' : 'dark';
-    const newMode = currentMode === 'light' ? 'dark' : 'light';
-    setMode(newMode);
-    localStorage.setItem('mode', newMode);
+  // Navigate between sections
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(nav => nav.classList.remove("active"));
+      link.classList.add("active");
+
+      const targetPage = link.textContent.toLowerCase();
+      pages.forEach(page => {
+        if (page.getAttribute("data-page") === targetPage) {
+          page.classList.add("active");
+        } else {
+          page.classList.remove("active");
+        }
+      });
+    });
   });
 });
