@@ -261,14 +261,48 @@
     #SIDEBAR
   \*-----------------------------------*/
   
+  :root {
+    --neon-color-dark: var(--orange-yellow-crayola);
+    --neon-color-light: #0000FF; /* Define a more intense neon dark blue color */
+  }
+  
+  /* Light mode specific styles */
+  body.light-mode {
+    --neon-color: var(--neon-color-light);
+  }
+  
+  /* Dark mode specific styles */
+  body.dark-mode {
+    --neon-color: var(--neon-color-dark);
+  }
+  
+  @keyframes neon-border {
+    0% {
+      box-shadow: 0 0 2px var(--neon-color), 0 0 2px var(--neon-color);
+    }
+    50% {
+      box-shadow: 0 0 10px var(--neon-color), 0 0 8px var(--neon-color);
+    }
+    100% {
+      box-shadow: 0 0 2px var(--neon-color), 0 0 2px var(--neon-color);
+    }
+  }
+  
   .sidebar {
     margin-bottom: 15px;
     max-height: 112px;
     overflow: hidden;
     transition: var(--transition-2);
+    border: 1px solid var(--neon-color);
+    animation: neon-border 2s infinite;
   }
   
-  .sidebar.active { max-height: 405px; }
+  
+  
+  
+  .sidebar.active { 
+    max-height: 405px; 
+  }
   
   .sidebar-info {
     position: relative;
@@ -277,6 +311,7 @@
     align-items: center;
     gap: 15px;
   }
+  
   .info-content .name {
     color: var(--white-2);
     font-size: var(--fs-4);
@@ -320,12 +355,18 @@
   }
   
   .info_more-btn:hover,
-  .info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+  .info_more-btn:focus { 
+    background: var(--bg-gradient-yellow-1); 
+  }
   
   .info_more-btn:hover::before,
-  .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+  .info_more-btn:focus::before { 
+    background: var(--bg-gradient-yellow-2); 
+  }
   
-  .info_more-btn span { display: none; }
+  .info_more-btn span { 
+    display: none; 
+  }
   
   .sidebar-info_more {
     opacity: 0;
@@ -337,6 +378,8 @@
     opacity: 1;
     visibility: visible;
   }
+  
+  
   
   .contacts-list {
     display: grid;
@@ -535,6 +578,31 @@ body {
     font-size: var(--fs-6);
     font-weight: var(--fw-3);
     line-height: 1.6;
+  }
+  
+  .stats-image {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 100%;
+    height: auto;
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px; /* 2px gap between images */
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .stats-wrapper {
+    width: 100%;
+    max-width: 400px; /* Set a max-width for the container */
+    margin: 0 auto;
   }
   /*-----------------------------------*\
     #RESUME
