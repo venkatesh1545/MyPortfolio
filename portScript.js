@@ -14,7 +14,7 @@ sidebarBtn.addEventListener("click", function () {
   elementToggleFunc(sidebar);
 });
 
-//Project page 
+// Project page 
 
 // Custom select variables
 const select = document.querySelector("[data-select]");
@@ -64,7 +64,7 @@ for (let i = 0; i < filterBtn.length; i++) {
     lastClickedBtn = this;
   });
 }
-/* Certifications*/
+/* Certifications */
 
 // Custom select variables for certifications
 const select1 = document.querySelector("[data-select1]");
@@ -132,7 +132,6 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-
 // Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -151,7 +150,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
       }
     }
   });
-}
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const modeToggle = document.getElementById("mode-toggle");
   const body = document.body;
@@ -159,6 +159,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebarInfoMore = document.querySelector(".sidebar-info_more");
   const navLinks = document.querySelectorAll("[data-nav-link]");
   const pages = document.querySelectorAll("[data-page]");
+
+  // Set initial mode
+  if (!body.classList.contains('dark-mode') && !body.classList.contains('light-mode')) {
+    body.classList.add('dark-mode');
+  }
 
   // Toggle dark mode
   modeToggle.addEventListener("click", () => {
